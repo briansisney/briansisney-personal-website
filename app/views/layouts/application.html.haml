@@ -1,0 +1,51 @@
+!!!
+/ paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+/[if lt IE 7 ] <html class="ie6" lang="en">
+/[if IE 7 ] <html class="ie7" lang="en">
+/[if IE 8 ] <html class="ie8" lang="en">
+/[if IE 9 ] <html class="ie9" lang="en">
+/ [if (gt IE 9)|!(IE)]><!
+%html{:lang => "en"}
+  / <![endif]
+  %head
+    %title briansisney
+    %meta{:charset => "utf-8"}/
+    / Uncomment to make IE8 render like IE7
+    / <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    / Set the viewport width to device width for mobile
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "Untitled"
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+    = javascript_include_tag "vendor/custom.modernizr"
+  %body
+    / %div{:style => "width: 112px; height: 47px; -webkit-transform:   translateY(100px) translateX(100px) rotate(25deg); position: absolute;/* top: -20px; */"}
+    .row
+      %section.top-bar-section
+        %ul.no-bullet
+          %li
+            = link_to 'Home', root_url
+          %li
+            = link_to 'About Me', aboutme_path
+          %li
+            = link_to 'Resume', resume_path
+          %li
+            = link_to 'Contact', contact_path
+          %li
+            = link_to 'Portfolio', portfolio_path
+          %li
+            = link_to 'Blog', blogs_path 
+          %li   
+            - if user_signed_in?    
+              = link_to "Sign out", destroy_user_session_path, method: :delete
+            - else
+              = link_to 'Sign In', signin_path
+
+    .row          
+      %p.notice= notice unless notice.blank?
+      %p.alert= alert unless alert.blank?
+
+      = yield
+      = javascript_include_tag "application"
+          

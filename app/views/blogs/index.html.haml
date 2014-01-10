@@ -1,0 +1,18 @@
+%h1 Blogs entry
+- if user_signed_in?
+  =link_to "New Post", new_blog_path
+%br
+%br
+%br
+.row
+  .large-12.large-centered.columns
+    - @blogs.reverse.each do |blog|
+      .post-box
+        =link_to blog.title, blog_path(blog.id)
+        %br
+        .circle 
+          %img{src: blog.image_url(:medium)}
+        - if user_signed_in?
+          %br
+          =link_to "edit", edit_blog_path(blog.id)
+          =link_to 'Destroy', blog_path(blog.id), method: :delete, data: { confirm: 'Are you sure?' }, remote: true 

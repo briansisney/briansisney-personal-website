@@ -1,0 +1,12 @@
+.row
+  %h1= @blog.title
+  %br
+  %img{src: @blog.image_url(:large)}
+  %br
+  =@blog.post
+%br
+  posted by
+  %br
+  =@blog.user.name
+  %br
+  =@blog.date
