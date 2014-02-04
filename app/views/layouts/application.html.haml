@@ -19,33 +19,39 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
     = javascript_include_tag "vendor/custom.modernizr"
-  %body
+  %body.columns
     / %div{:style => "width: 112px; height: 47px; -webkit-transform:   translateY(100px) translateX(100px) rotate(25deg); position: absolute;/* top: -20px; */"}
     .row
-      %section.top-bar-section
-        %ul.no-bullet
-          %li
-            = link_to 'Home', root_url
-          %li
-            = link_to 'About Me', aboutme_path
-          %li
-            = link_to 'Resume', resume_path
-          %li
-            = link_to 'Contact', contact_path
-          %li
-            = link_to 'Portfolio', portfolio_path
-          %li
-            = link_to 'Blog', blogs_path 
-          %li   
-            - if user_signed_in?    
-              = link_to "Sign out", destroy_user_session_path, method: :delete
-            - else
-              = link_to 'Sign In', signin_path
-
+      %nav.topbar.no-bullet
+        %section.top-bar-section.small-10.small-centered.columns
+          %ul.no-bullet
+            -unless current_page? root_path
+              %li
+                =link_to image_tag('logosmall.gif'), root_url
+            %li.right
+              = link_to 'Portfolio', portfolio_path
+            %li.right
+              = link_to 'Blog', blogs_path
+            %li.right
+              = link_to 'Resume', resume_path
+            %li.right
+              = link_to 'Contact', contact_path 
+            
     .row          
       %p.notice= notice unless notice.blank?
       %p.alert= alert unless alert.blank?
 
       = yield
       = javascript_include_tag "application"
+    .footer
+      %br
+      %br
+      %br
+      %section.small-10.small-centered.columns
+        %ul.no-bullet
+          %li.right
+            = link_to 'GitHub', "https://github.com/briansisney", :class => "footer"
+          %li.right
+            = link_to 'Twitter', "https://twitter.com/Lebrian", :class => "footer"
+
           

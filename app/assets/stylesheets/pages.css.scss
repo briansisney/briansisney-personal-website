@@ -1,3 +1,47 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  color: #222;
+  background: #eee image-url("brushed/brushed.png");
+}
+
+.mylink{
+  color: #222;
+  &:visited {
+    color: #222;
+  }
+  &:hover {
+    color: #EB3D1A;
+  }
+}
+
+// .top-bar-section ul li > a{
+//   background: #eee image-url("brushed/brushed.png");
+//   color: #EB3D1A;
+//   // display: none;
+// }
+.top-bar-section li a:not(.button){
+  background: #eee image-url("brushed/brushed.png");
+  color: #EB3D1A;
+  font-size: 1rem;
+  &:hover {
+    color: #222;
+    background: #eee image-url("brushed/brushed.png");
+  }
+}
+.footer{
+  color: #EB3D1A;
+  padding: 15px;
+  &:hover {
+    color: #222;
+    padding: 15px;
+  }
+}
+.pad {
+  a.footer {
+    margin-left: 15px;
+  }
+}
+
+

@@ -1,11 +1,23 @@
 .row
-  .large-6.large-centered.columns
-    %h1 I AM
-    %h1 BRIANSISNEY
-.row
-  .large-6.large-centered.columns
+  .small-4.medium-2.small-centered.columns
     %br
-    %h3 welcome to my site
+    =image_tag('jan27logo.gif')
+    %br
+.row    
+  .small-10.small-centered.columns
+    %br
+    %h3.text-center
+      Hello! I'm Brian Sisney, a 
+      =link_to "full stack web developer.", "https://github.com/briansisney", :class => "mylink"
+      I believe in creating apps that 
+      =link_to "make people's lives easier.", "http://carewell.herokuapp.com", :class => "mylink"#will be carewell app
+      This site shows
+      =link_to "examples", portfolio_path, :class => "mylink"
+      of some of the skills I leared at 
+      =link_to "MakerSquare", "http://www.themakersquare.com", :class => "mylink"
+      coding bootcamp.
+
+
 
 
 / %div{:style => "width: 112px; height: 47px; border-bottom: 1px solid black; -webkit-transform:   translateY(-20px) translateX(5px) rotate(27deg); position: absolute;/* top: -20px; */"}
