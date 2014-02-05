@@ -1,57 +1,37 @@
 !!!
-/ paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
-/[if lt IE 7 ] <html class="ie6" lang="en">
-/[if IE 7 ] <html class="ie7" lang="en">
-/[if IE 8 ] <html class="ie8" lang="en">
-/[if IE 9 ] <html class="ie9" lang="en">
-/ [if (gt IE 9)|!(IE)]><!
 %html{:lang => "en"}
-  / <![endif]
   %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
     %title briansisney
-    %meta{:charset => "utf-8"}/
-    / Uncomment to make IE8 render like IE7
-    / <meta http-equiv="X-UA-Compatible" content="IE=7" />
-    / Set the viewport width to device width for mobile
-    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %title= content_for?(:title) ? yield(:title) : "Untitled"
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = stylesheet_link_tag "application"    
     = csrf_meta_tags
-    = javascript_include_tag "vendor/custom.modernizr"
-  %body.columns
-    / %div{:style => "width: 112px; height: 47px; -webkit-transform:   translateY(100px) translateX(100px) rotate(25deg); position: absolute;/* top: -20px; */"}
-    .row
-      %nav.topbar.no-bullet
-        %section.top-bar-section.small-10.small-centered.columns
-          %ul.no-bullet
-            -unless current_page? root_path
-              %li
-                =link_to image_tag('logosmall.gif'), root_url
-            %li.right
-              = link_to 'Portfolio', portfolio_path
-            %li.right
-              = link_to 'Blog', blogs_path
-            %li.right
-              = link_to 'Resume', resume_path
-            %li.right
-              = link_to 'Contact', contact_path 
-            
-    .row          
-      %p.notice= notice unless notice.blank?
-      %p.alert= alert unless alert.blank?
+  %body
+    .site-wrapper
+      .site-wrapper-inner
+        .cover-container
+          .masthead.clearfix
+            .inner
+              .masthead-brand 
+                -unless current_page? root_path
+                  =link_to image_tag('logosmall.gif'), root_url
+              %ul.nav.masthead-nav
+                %li.active
+                  = link_to 'Portfolio', portfolio_path
+                %li
+                  = link_to 'Blog', blogs_path
+                %li
+                  = link_to 'Contact', contact_path 
+          .inner.cover
+            = yield
+          .mastfoot
+            .inner
+              %p
+                = link_to 'GitHub', "https://github.com/briansisney", :class => "footer"
+                =" | "
+                = link_to 'Twitter', "https://twitter.com/Lebrian", :class => "footer"
 
-      = yield
-      = javascript_include_tag "application"
-    .footer
-      %br
-      %br
-      %br
-      %section.small-10.small-centered.columns
-        %ul.no-bullet
-          %li.right
-            = link_to 'GitHub', "https://github.com/briansisney", :class => "footer"
-          %li.right
-            = link_to 'Twitter', "https://twitter.com/Lebrian", :class => "footer"
+    = javascript_include_tag "application"
 
           

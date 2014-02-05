@@ -33,6 +33,8 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.0.3.0)
+      sass (~> 3.2)
     builder (3.1.4)
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
@@ -70,9 +72,6 @@ GEM
       nokogiri (~> 1.5)
       ruby-hmac
     formatador (0.2.4)
-    foundation-rails (5.0.2.0)
-      railties (>= 3.1.0)
-      sass (>= 3.2.0)
     haml (4.0.4)
       tilt
     haml-rails (0.5.1)
@@ -170,8 +169,6 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.1.0)
-      coffee-rails
     tzinfo (0.3.38)
     uglifier (2.4.0)
       execjs (>= 0.3.0)
@@ -188,12 +185,12 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  bootstrap-sass
   carrierwave
   coffee-rails (~> 4.0.0)
   devise
   figaro
   fog
-  foundation-rails
   haml
   haml-rails
   hirb
@@ -207,6 +204,5 @@ DEPENDENCIES
   rmagick
   sass-rails (~> 4.0.0)
   sdoc
-  turbolinks
   uglifier (>= 1.3.0)
   unf

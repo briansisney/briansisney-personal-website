@@ -1,47 +1,210 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body{
-  color: #222;
-  background: #eee image-url("brushed/brushed.png");
-}
-
-.mylink{
-  color: #222;
-  &:visited {
-    color: #222;
-  }
-  &:hover {
-    color: #EB3D1A;
-  }
-}
-
-// .top-bar-section ul li > a{
-//   background: #eee image-url("brushed/brushed.png");
-//   color: #EB3D1A;
-//   // display: none;
+// *{
+//   border: 1px solid red;
 // }
-.top-bar-section li a:not(.button){
+
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #EB3D1A;
+  text-decoration: none;
+}
+ul{
+  li{
+    a{
+      color: #EB3D1A;
+       &:visited {
+         color: #EB3D1A;
+       }
+       &:hover {
+         color: #222;
+       } 
+    }
+  }
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
   background: #eee image-url("brushed/brushed.png");
-  color: #EB3D1A;
-  font-size: 1rem;
-  &:hover {
-    color: #222;
-    background: #eee image-url("brushed/brushed.png");
+}
+body {
+  color: #222;
+  text-align: center;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+}
+h1{
+  color: #222;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 24px;
+  a{
+  color: #222;
+  text-decoration: none;
+    &:visited {
+      color: #222;
+    }
+    &:hover {
+      color: #EB3D1A;
+    }
   }
 }
-.footer{
-  color: #EB3D1A;
-  padding: 15px;
-  &:hover {
-    color: #222;
-    padding: 15px;
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  // display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+}
+.site-wrapper-inner {
+  // display: table-cell;
+  // vertical-align: top;
+}
+.cover-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+.masthead.clearfix{
+  display: block;
+  clear:both;
+}
+
+.inner.cover{
+  display: block;
+  clear:both;
+}
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 16px;
+  color: #EB3D1A; /* IE8 proofing */
+  
+}
+ul{
+  padding: 0px;
+}
+
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+    bottom: 30px;
+    left: 30px;
+  }
+  .masthead-nav {
+    float: right;
   }
 }
-.pad {
-  a.footer {
-    margin-left: 15px;
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+
+
+
+/*
+ * Footer
+ */
+
+.mastfoot{
+  p{
+    a{
+     color: #EB3D1A;
+      &:visited {
+        color: #EB3D1A;
+      }
+      &:hover {
+        color: #222;
+      } 
+    }
+  }
+  
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    // position: fixed;
+    top: 0;
+    clear: fixed;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .inner.cover{
+    display: block;
+    // vertical-align: top;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    
+  }
+ 
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 750px;
   }
 }
+
+
+
+
+
+
+
+
 
 
