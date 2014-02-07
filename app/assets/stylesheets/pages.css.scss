@@ -4,7 +4,50 @@
 // *{
 //   border: 1px solid red;
 // }
-
+.pane{
+  border: 1px solid #D6D6D6;
+  box-shadow: 3px 3px 15px #B5B1B1;
+  display: inline-table;
+  padding: 30px;
+  img{
+    width: 100%;
+  }
+  width: 37%;
+  // height: 400px;
+  background-color: #FCFCF7;
+  margin: 10px;
+  h2{
+    margin-top: 0px;
+    // color: #EB3D1A;
+    font-weight: normal; 
+  }
+  a{
+    &:visited {
+      color: #EB3D1A;
+    }
+    &:hover {
+      color: #222;
+    } 
+  }
+  p{
+    text-align: left;
+  }
+  ul{
+    width: 90%;
+    float: right;
+    margin-top: 0px; 
+    li{
+      width: 100%;
+      text-align: left;
+    }
+    }
+  .links {
+    clear:both;
+  }
+}
+h1.pageheader{
+  color: #EB3D1A;
+}
 
 /* Links */
 a,
@@ -173,7 +216,10 @@ ul{
     clear: fixed;
   }
   .mastfoot {
-    position: fixed;
+    // height: 10px;
+    // width: 100%;
+    // background: #eee image-url("brushed/brushed.png");
+    // clear: fixed;
     bottom: 0;
   }
   /* Start the vertical centering */

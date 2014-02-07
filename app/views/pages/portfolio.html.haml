@@ -1,2 +1,37 @@
-%h1 Pages#portfolio
-%p Find me in app/views/pages/portfolio.html.haml
+%h1.pageheader Portfolio
+
+.container
+  .row
+    .col-md-5.col-sm-12.pane
+      %h2 Carewell
+      =image_tag("carewell.png")
+      %p CareWell allows families caring for aging loved ones to share tasks, upload photos, and provide positive encouragement to each other through simple interactions.
+      %p Key Roles:
+      %ul
+        %li Applied eager loading and memorization best practices for faster database loading.
+        %li Implemented Heroku Scheduler and Twilio text integration where users can post comments through text.
+        %li Set up Action Mailer so users can privately invite family members into his or her group using params.
+        %li Created dynamic Like/Unlike button using the Acts As Votable gem and Ajax.
+        %li Rails app, PostgreSQL database, deployed on Heroku
+      .links    
+        =link_to "Live Site", "http://carewell.herokuapp.com", :target => "_blank"
+        =" | "
+        = link_to 'Git Repo', "https://github.com/RollWave07/CareWell", :target => "_blank"
+    .col-md-5.col-sm-12.pane
+      %h2 Weightable
+      =image_tag("weightable.png")
+      %p Weightable allows users to track his or her weight, upload photos, and receive encouragement from friends.
+      %p Key Roles:
+      %ul
+        %li Set up data structure for Rails app.
+        %li Allowed users to write, edit and delete weight check-ins and comments using Ajax.
+        %li Implemented CarrierWave and RMagic for easy photo uploads.
+        %li Set up Amazon S3 for cloud storage.
+        %li Implemented user authentication with Devise gem.
+        %li Implemented dynamic charts to show weight with Chart.js. 
+        %li Rails app, PostgreSQL database, deployed on Heroku
+
+      .links
+        = link_to "Live Site", "http://weightable.herokuapp.com", :target => "_blank"
+        =" | "
+        = link_to 'Git Repo', "https://github.com/briansisney/weightable", :target => "_blank"
