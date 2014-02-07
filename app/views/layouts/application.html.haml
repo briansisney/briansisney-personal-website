@@ -22,6 +22,8 @@
                 %li
                   = link_to 'Blog', blogs_path
                 %li
+                  =link_to "Resume", href="/briansisney_resume.pdf", :target => "_blank"
+                %li
                   = link_to 'Contact', contact_path 
           .inner.cover
             = yield
@@ -31,7 +33,6 @@
                 = link_to 'GitHub', "https://github.com/briansisney", :class => "footer", :target => "_blank"
                 =" | "
                 = link_to 'Twitter', "https://twitter.com/Lebrian", :class => "footer", :target => "_blank"
-
     = javascript_include_tag "application"
 
           

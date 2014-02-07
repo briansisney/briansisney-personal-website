@@ -4,6 +4,16 @@
 // *{
 //   border: 1px solid red;
 // }
+.builtby{
+  font-size: 12px;
+  text-align: right;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  color: #EB3D1A;
+  position: fixed;
+  bottom: 0;
+  float: right; 
+  clear: both;  
+}
 .pane{
   border: 1px solid #D6D6D6;
   box-shadow: 3px 3px 15px #B5B1B1;
