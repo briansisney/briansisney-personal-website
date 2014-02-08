@@ -1,22 +1,26 @@
-= form_for(@blog) do |f| 
-  - if @blog.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@blog.errors.count, "error")} prohibited this blog from being saved:"
-      %ul
-        - @blog.errors.full_messages.each do |msg|
-          %li= msg
+.container
+  .row
+    .col-md-6.columns
+      .blog-form
+        = form_for(@blog) do |f| 
+          - if @blog.errors.any?
+            #error_explanation
+              %h2= "#{pluralize(@blog.errors.count, "error")} prohibited this blog from being saved:"
+              %ul
+                - @blog.errors.full_messages.each do |msg|
+                  %li= msg
 
-  .field
-    = f.label :title
-    = f.text_field :title
+          .field
+            = f.label :title
+            = f.text_field :title
 
-    = f.label :image
-    = f.file_field :image
-    %br
-    = f.label :post
-    = f.text_area :post
+            = f.label :image
+            = f.file_field :image
 
-    = f.hidden_field :date, value: Date.today.to_time.strftime("%A, %m/%d/%y")
+            = f.label :post
+            = f.text_area :post
 
-  .actions
-    = f.submit 'Save'
+            = f.hidden_field :date, value: Date.today.to_time.strftime("%A, %m/%d/%y")
+
+          .actions
+            = f.submit 'Save'

@@ -1,12 +1,10 @@
-.row
-  %h1= @blog.title
-  %br
-  %img{src: @blog.image_url(:large)}
-  %br
-  =@blog.post
-%br
-  posted by
-  %br
-  =@blog.user.name
-  %br
-  =@blog.date
+.container
+  .row
+    .back=link_to "Back", :back
+    .large-12.column.blog-show
+      %h1= @blog.title
+      -if @blog.image_url
+        %img{src: @blog.image_url(:large)}
+      %p=@blog.post
+      .postedby="posted by #{@blog.user.name} on #{@blog.date}"
+
