@@ -37,15 +37,49 @@
     img{
       margin-right: 30px;
       float: left;
+      width: 200;
+      height: auto;
     }
     h1{
       color: #EB3D1A;
       text-align: left;
       margin: 0px;
     }
+    h2{
+      color: #EB3D1A;
+      margin-top: 0px;
+      font-weight: normal;
+    }
     p{
       color: #222;
       text-align: left;
+    }
+    .key-roles{
+      clear: both;
+      float: left;
+      // padding: 10px;
+      p{
+        text-align: left;
+        color: #EB3D1A;
+      }
+      ul{
+        width: 95%;
+        float: right;
+        margin-top: 0px; 
+        li{
+          width: 100%;
+          text-align: left;
+        }
+      }
+    }
+    .links {
+    clear:both;
+    }
+    .hint{
+      color: #222;
+      text-align: left;
+      padding-bottom:10px;
+      clear: both;
     }
   }
 }
