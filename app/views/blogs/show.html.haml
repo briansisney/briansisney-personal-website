@@ -5,6 +5,6 @@
       %h1= @blog.title
       -if @blog.image_url
         %img{src: @blog.image_url(:large)}
-      %p=simple_format(@blog.post)
+      =simple_format(@blog.post)
       .postedby="posted by #{@blog.user.name} on #{@blog.date}"
 
