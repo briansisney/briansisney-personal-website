@@ -5,7 +5,7 @@
 .container
   .row
     .col-md-8.blog-index
-      - @blogs.reverse.each do |blog|
+      - @blogs.each do |blog|
         =link_to blog_path(blog.id) do
           .blog-pane
             %img{src: blog.image_url(:medium)}

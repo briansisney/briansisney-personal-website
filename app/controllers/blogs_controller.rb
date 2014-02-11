@@ -2,7 +2,7 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, :except => [:show, :index]
   def index
-    @blogs = Blog.all
+    @blogs = Blog.order(created_at: :desc)
   end
 
   def show
