@@ -11,11 +11,11 @@
         .key-roles
           %p Key Roles:
           %ul
-            %li Applied eager loading and memorization best practices for faster database loading.
+            %li Applied eager loading and memoization to increase page load speed.
             %li Implemented Heroku Scheduler and Twilio text integration where users can post comments through text.
             %li Set up Action Mailer so users can privately invite family members into his or her group using params.
             %li Created dynamic Like/Unlike button using the Acts As Votable gem and Ajax.
-            %li Rails app, PostgreSQL database, deployed on Heroku
+            %li Rails app, PostgreSQL database, deployed on Heroku.
           .hint Hint: login: captain@hook.com, password: password
         .links    
           =link_to "Live Site", "http://carewell.herokuapp.com", :target => "_blank"
@@ -30,15 +30,31 @@
         .key-roles
           %p Key Roles:
           %ul
+            %li Allowed users to “friend” and follow one another.
+            %li Implemented dynamic charts to show past weights with Chart.js.
             %li Set up data structure for Rails app.
             %li Allowed users to write, edit and delete weight check-ins and comments using Ajax.
-            %li Implemented CarrierWave and RMagic for easy photo uploads.
             %li Set up Amazon S3 for cloud storage.
-            %li Implemented user authentication with Devise gem.
-            %li Implemented dynamic charts to show weight with Chart.js. 
-            %li Rails app, PostgreSQL database, deployed on Heroku
+            %li Implemented CarrierWave and RMagic for easy photo uploads. 
+            %li Rails app, PostgreSQL database, deployed on Heroku.
           .hint Hint: login: anakin@skywalker.com, password: password
         .links
           = link_to "Live Site", "http://weightable.herokuapp.com", :target => "_blank"
           =" | "
           = link_to 'Git Repo', "https://github.com/briansisney/weightable", :target => "_blank"
+    .col-md-8.blog-index
+      .blog-pane
+        %h2 Social Media League
+        =image_tag("sml-200.png")
+        %p A Hackathon project - Social Media League helps small business owners get started using social media. After logging in through Facebook, a user is added to a scoreboard based on the activity on his or her page. Future work on the project will further gamify social media interactions in conjunction with in-person lessons. 
+        .key-roles
+          %p Key Roles:
+          %ul
+            %li Created user login through Facebook.
+            %li Inported users comments, likes, and posts from his or her Facebook feed.
+            %li Set up data structure for Rails app.
+            %li Rails app, PostgreSQL database, deployed on Heroku.
+        .links
+          = link_to "Live Site", "http://www.socialmedialeague.com/", :target => "_blank"
+          =" | "
+          = link_to 'Git Repo', "https://github.com/briansisney/social_media_league", :target => "_blank"
