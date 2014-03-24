@@ -9,13 +9,13 @@
               %ul
                 - @blog.errors.full_messages.each do |msg|
                   %li= msg
-          .field
+          .field.bloginput
             = f.label :title
             = f.text_field :title
-
+            
             = f.label :image
             = f.file_field :image
-
+         
             = f.label :post
             = f.text_area :post
 
